@@ -18,7 +18,7 @@ export default function Customers() {
   // Fetch customers
   const fetchCustomers = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/customers", {
+      const res = await fetch("https://backend-hvgn.onrender.com/api/customers", {
         method: "GET",
         credentials: "include",
       });
