@@ -9,7 +9,7 @@ export default function Dashboard() {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/auth", {
+        const res = await fetch("https://backend-hvgn.onrender.com/api/auth", {
           credentials: "include",
         });
 
@@ -26,7 +26,7 @@ export default function Dashboard() {
 
   const handleLogout = async () => {
     try {
-      await fetch("http://localhost:5000/api/auth/logout", {
+      await fetch("https://backend-hvgn.onrender.com/api/auth/logout", {
         method: "POST",
         credentials: "include",
       });
