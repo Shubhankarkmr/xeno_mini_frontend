@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import '../styles/CampaignHistory.css';
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://backend-hvgn.onrender.com/api";
 
 export default function CampaignHistory() {
   const [campaigns, setCampaigns] = useState([]);
