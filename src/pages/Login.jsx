@@ -9,7 +9,7 @@ export default function Login() {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/auth", {
+        const res = await fetch("https://backend-hvgn.onrender.com/api/auth", {
           method: "GET",
           credentials: "include",
         });
@@ -25,7 +25,7 @@ export default function Login() {
   }, [navigate]);
 
   const startGoogle = () => {
-    window.location.href = "http://localhost:5000/api/auth/google";
+    window.location.href = "https://backend-hvgn.onrender.com/api/auth/google";
   };
 
   return (
