@@ -58,8 +58,8 @@ export default function Customers() {
     e.preventDefault();
     try {
       const url = editingId
-        ? `http://localhost:5000/api/customers/${editingId}`
-        : "http://localhost:5000/api/customers";
+        ? `https://backend-hvgn.onrender.com/api/customers/${editingId}`
+        : "https://backend-hvgn.onrender.com/api/customers";
       const method = editingId ? "PUT" : "POST";
 
       const res = await fetch(url, {
@@ -117,7 +117,7 @@ export default function Customers() {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure?")) return;
     try {
-      const res = await fetch(`http://localhost:5000/api/customers/${id}`, {
+      const res = await fetch(`https://backend-hvgn.onrender.com/api/customers/${id}`, {
         method: "DELETE",
         credentials: "include",
       });
