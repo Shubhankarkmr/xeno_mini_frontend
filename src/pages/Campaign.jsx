@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import '../styles/campaign.css';
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://backend-hvgn.onrender.com/api";
 
 export default function CampaignPage() {
   const navigate = useNavigate();
