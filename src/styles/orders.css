@@ -1,0 +1,269 @@
+/* 🌐 Orders Page Container */
+.orders-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  font-family: "Inter", sans-serif;
+  color: #1f2937;
+  background: #f0f7ff53; /* Light blue background */
+  min-height: 100vh;
+}
+
+/* 🔹 Titles */
+.orders-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.orders-message {
+  text-align: center;
+  margin: 1rem 0;
+  padding: 0.85rem 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+.orders-message:empty {
+  display: none;
+}
+
+/* ✅ Success / ❌ Error */
+.orders-message:contains("✅") {
+  background: #dcfce7;
+  color: #166534;
+}
+.orders-message:contains("❌") {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+.orders-message:contains("🗑️") {
+  background: #fef3c7;
+  color: #92400e;
+}
+.orders-message:contains("✏️") {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+/* 🔹 Form Card */
+.orders-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease;
+}
+.orders-form:hover {
+  transform: translateY(-2px);
+}
+
+.orders-form h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+/* 🔹 Order Items Grid */
+.order-item-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.order-item-row input {
+  padding: 0.8rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #f9fafb;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+.order-item-row input:focus {
+  border-color: #2563eb;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+}
+
+/* ❌ Remove Item Button */
+.remove-item-btn {
+  background: #ef4444;
+  border: none;
+  padding: 0.65rem 0.9rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+  transition: 0.2s;
+}
+.remove-item-btn:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+}
+
+/* 🔹 Form Buttons */
+.form-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.add-item-btn,
+.orders-submit,
+.cancel-btn {
+  padding: 0.9rem 1.2rem;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* ➕ Add Item */
+.add-item-btn {
+  background: #22c55e;
+  color: white;
+}
+.add-item-btn:hover {
+  background: #16a34a;
+}
+
+/* Save / Update */
+.orders-submit {
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  color: white;
+}
+.orders-submit:hover {
+  background: linear-gradient(90deg, #1e40af, #1d4ed8);
+  transform: scale(1.02);
+}
+
+/* Cancel */
+.cancel-btn {
+  background: #facc15;
+  color: #1f2937;
+}
+.cancel-btn:hover {
+  background: #eab308;
+}
+
+/* 🔹 Orders Table */
+.orders-table-container {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  overflow-x: auto;
+}
+
+.orders-table-container h2 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #1e40af;
+}
+
+/* Table Styling */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 14px 12px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.orders-table th {
+  background: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+}
+
+.orders-table tr:nth-child(even) {
+  background: #f9fafb;
+}
+.orders-table tr:hover {
+  background: #eef2ff;
+  transition: background 0.2s ease;
+}
+
+/* 🏷 Status Dropdown */
+.status-select {
+  padding: 0.55rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-weight: 600;
+  background: #f9fafb;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.status-select:hover {
+  border-color: #2563eb;
+}
+
+/* 💰 Total Column */
+.total-cell {
+  font-weight: 700;
+  color: #2563eb;
+}
+
+/* 🔹 Action Buttons */
+.edit-btn,
+.delete-btn {
+  border: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-right: 0.4rem;
+}
+
+.edit-btn {
+  background: #3b82f6;
+  color: white;
+}
+.edit-btn:hover {
+  background: #2563eb;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+.no-orders {
+  text-align: center;
+  padding: 1rem;
+  font-style: italic;
+  color: #6b7280;
+}
+
+/* 🔹 Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

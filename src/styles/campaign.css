@@ -1,0 +1,199 @@
+/* ===== Body ===== */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  color: #1f2937;
+}
+
+/* ===== Container ===== */
+.max-w-3xl {
+  max-width: 768px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* ===== Card ===== */
+.form-card {
+  background: linear-gradient(145deg, #ffffff, #f3f4f6);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.form-card:hover {
+  transform: translateY(-2px);
+}
+
+/* ===== Headings ===== */
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #374151;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Inputs & Textarea ===== */
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #f9fafb;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.2);
+}
+
+/* ===== Buttons ===== */
+button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.bg-blue-500 { background: linear-gradient(90deg, #3b82f6, #2563eb); color: #fff; }
+.bg-green-500 { background: linear-gradient(90deg, #10b981, #059669); color: #fff; }
+.bg-yellow-500 { background: linear-gradient(90deg, #facc15, #eab308); color: #fff; }
+.bg-purple-500 { background: linear-gradient(90deg, #8b5cf6, #7c3aed); color: #fff; }
+
+/* ===== Message Box ===== */
+.message-box {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.message-box.success {
+  background: #dcfce7;
+  color: #065f46;
+  border-left: 5px solid #22c55e;
+}
+
+.message-box.error {
+  background: #fee2e2;
+  color: #b91c1c;
+  border-left: 5px solid #ef4444;
+}
+
+/* ===== Segment Card ===== */
+.segment-card {
+  background: #f3f4f6;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  margin-top: 1rem;
+}
+
+.segment-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+@media(min-width: 640px) {
+  .segment-row {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.rule-label {
+  width: 120px;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* ===== AI Suggestions & Tags ===== */
+.suggestions-box,
+.tags-box {
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  background: linear-gradient(145deg, #ffffff, #f9fafb);
+  border: 1px solid #d1d5db;
+  margin-top: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: linear-gradient(90deg, #fde68a, #fcd34d);
+  color: #78350f;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Audience Size ===== */
+.audience-size {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #374151;
+  margin-top: 1rem;
+}
+
+/* ===== Buttons Group ===== */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.button-group button {
+  flex: 1;
+}
+
+/* ===== Smooth Transitions ===== */
+input, select, textarea, button {
+  transition: all 0.3s ease;
+}

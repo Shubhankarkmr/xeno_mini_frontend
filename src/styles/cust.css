@@ -1,0 +1,179 @@
+.customers-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+  font-family: "Inter", sans-serif;
+  color: #1f2937;
+  background: #f0f9ff; /* 🔹 Light blue background */
+  min-height: 100vh;   /* Full-page background */
+}
+
+/* 🔹 Titles */
+.page-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #475569;
+  margin-bottom: 2rem;
+}
+
+/* 🔹 Card */
+.form-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease;
+}
+.form-card:hover {
+  transform: translateY(-2px);
+}
+
+/* 🔹 Form */
+.customer-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.customer-form input {
+  padding: 0.85rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  background: #f9fafb;
+  transition: all 0.2s ease;
+}
+.customer-form input:focus {
+  border-color: #2563eb;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.btn-primary {
+  grid-column: span 2;
+  padding: 0.9rem;
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.btn-primary:hover {
+  background: linear-gradient(90deg, #1e40af, #1d4ed8);
+  transform: scale(1.02);
+}
+
+/* 🔹 Messages */
+.message {
+  margin: 1.5rem 0;
+  text-align: center;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+}
+.success {
+  color: #166534;
+  background: #dcfce7;
+}
+.error {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+/* 🔹 Table */
+.table-container {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  background: white; /* Table card stays white */
+}
+
+.customers-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.customers-table th,
+.customers-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.customers-table th {
+  background: #f1f5f9;
+  color: #374151;
+  font-weight: 600;
+}
+
+.customers-table tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+.customers-table tr:hover {
+  background: #e0f2fe; /* Soft blue hover */
+  transition: background 0.2s ease;
+}
+
+/* 🔹 Buttons */
+.btn-edit {
+  background: #facc15;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  margin-right: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.btn-edit:hover {
+  background: #eab308;
+  transform: translateY(-1px);
+}
+
+.btn-delete {
+  background: #ef4444;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: white;
+  margin-right: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.btn-delete:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+.btn-link {
+  background: #22c55e;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.btn-link:hover {
+  background: #16a34a;
+  transform: translateY(-1px);
+}
