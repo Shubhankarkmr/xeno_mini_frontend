@@ -18,7 +18,7 @@ export default function Orders() {
   // Fetch Orders
   const fetchOrders = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/orders", {
+      const res = await fetch("https://backend-hvgn.onrender.com/api/orders", {
         method: "GET",
         credentials: "include",
       });
@@ -69,8 +69,8 @@ export default function Orders() {
     e.preventDefault();
     try {
       const url = editingOrderId
-        ? `http://localhost:5000/api/orders/${editingOrderId}`
-        : "http://localhost:5000/api/orders";
+        ? `https://backend-hvgn.onrender.com/api/orders/${editingOrderId}`
+        : "https://backend-hvgn.onrender.com/api/orders";
       const method = editingOrderId ? "PUT" : "POST";
 
       const res = await fetch(url, {
@@ -106,7 +106,7 @@ export default function Orders() {
   const handleDelete = async (id) => {
     if (!window.confirm("Delete this order?")) return;
     try {
-      const res = await fetch(`http://localhost:5000/api/orders/${id}`, {
+      const res = await fetch(`https://backend-hvgn.onrender.com/api/orders/${id}`, {
         method: "DELETE",
         credentials: "include",
       });
@@ -125,7 +125,7 @@ export default function Orders() {
 
   const handleStatusChange = async (id, status) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/orders/${id}`, {
+      const res = await fetch(`https://backend-hvgn.onrender.com/api/orders/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
